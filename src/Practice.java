@@ -4,7 +4,8 @@ public class Practice {
 
 	public static void main(String[] args) {
 		// bezwgledna();
-		sumaElementowTablicy();
+		// sumaElementowTablicy();
+		zliczanieIlosciZadanejLiczby();
 
 	}
 
@@ -37,4 +38,31 @@ public class Practice {
 
 	}
 
+	private static void zliczanieIlosciZadanejLiczby() {
+		int a, b, wynik = 0;
+		Scanner scan = new Scanner(System.in);
+		// Rozmiar tablicy
+		System.out.println("Podaj ile elementów ma tablica");
+		a = scan.nextInt();
+		System.out.println("Podaj zliczany element");
+		// Jaki element zliczamy
+		b = scan.nextInt();
+
+		int[] tablica = new int[a];
+		// uzupe³neinie tablicy
+		for (int i = 0; i < a; i++) {
+			System.out.println("Podaj " + i + " element");
+			tablica[i] = scan.nextInt();
+		}
+
+		// szukanie w tablicy
+
+		for (int i = 0; i < a; i++) {
+			if (b == tablica[i]) {
+				wynik++;
+			}
+
+		}
+		System.out.println("Iloœæ wystapiêñ liczby " + b + " wynosi " + wynik);
+	}
 }
